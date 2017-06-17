@@ -14,7 +14,7 @@ class App extends Component {
         <p className="App-intro">
           To get started, what company are you representing?
         </p>
-        <Search />
+        <SearchForm />
         <Contact />
       </div>
     );

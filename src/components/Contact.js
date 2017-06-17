@@ -5,6 +5,7 @@ class Contact extends Component {
     default = { firstName: '', lastName: '', email: '', phone: '' };
     state = { ...this.default }; 
 
+    debugger    
     setValue = (e) => {
         let { target: { id, value }} = e;
     }
@@ -23,18 +24,18 @@ class Contact extends Component {
                     }} 
                 >
                     <Form.Field
-                        id = 'firstName'
-                        value = { firstName }
-                        onChange = { this.setValue }
-                        control = 'input'
-                        placeHolder = 'First Name'
+                        id='firstName'
+                        value={firstName}
+                        onChange={this.setValue}
+                        control='input'
+                        placeholder='First Name'
                     />    
                     <Form.Field
                         id = 'lastName'
                         value = { lastName }
                         onChange = { this.setValue }
                         control = 'input'
-                        placeHolder = 'Last Name'
+                        placeholder = 'Last Name'
                     />
                     <Form.Field
                         id = 'email'
@@ -42,7 +43,7 @@ class Contact extends Component {
                         onChange = { this.setValue }
                         control = 'input'
                         type = 'email'
-                        placeHolder = 'Email'
+                        placeholder = 'Email'
                     />
                     <Form.Field
                         id = 'phone'
@@ -50,7 +51,7 @@ class Contact extends Component {
                         onChange = { this.setValue }
                         control = 'input'
                         type = 'number'
-                        placeHolder = 'Phone Number'
+                        placeholder = 'Phone Number'
                     />
                     <Form.Button>Save</Form.Button>
                 </Form>
