@@ -50,6 +50,7 @@ class Contact extends Component {
                         onChange={this.setValue}
                         control='input'
                         type='number'
+                        pattern='\d+'
                         placeholder='Phone Number'
                     />
                     <Form.Button>Save</Form.Button>
