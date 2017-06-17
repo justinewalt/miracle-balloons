@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Search from './components/SearchForm';
+import SearchForm from './components/SearchForm';
+import Contact from './components/Contact';
 import './App.css';
 
 class App extends Component {
@@ -14,6 +15,7 @@ class App extends Component {
           To get started, what company are you representing?
         </p>
         <Search />
+        <Contact />
       </div>
     );
   }
