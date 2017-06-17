@@ -4,8 +4,7 @@ import { Form } from 'semantic-ui-react';
 class Contact extends Component {
     default = { firstName: '', lastName: '', email: '', phone: '' };
     state = { ...this.default }; 
-
-    debugger    
+  
     setValue = (e) => {
         let { target: { id, value }} = e;
     }
@@ -31,27 +30,27 @@ class Contact extends Component {
                         placeholder='First Name'
                     />    
                     <Form.Field
-                        id = 'lastName'
-                        value = { lastName }
-                        onChange = { this.setValue }
-                        control = 'input'
-                        placeholder = 'Last Name'
+                        id='lastName'
+                        value={lastName}
+                        onChange={this.setValue}
+                        control='input'
+                        placeholder='Last Name'
                     />
                     <Form.Field
-                        id = 'email'
-                        value = { email }
-                        onChange = { this.setValue }
-                        control = 'input'
-                        type = 'email'
-                        placeholder = 'Email'
+                        id='email'
+                        value={email}
+                        onChange={this.setValue}
+                        control='input'
+                        type='email'
+                        placeholder='Email'
                     />
                     <Form.Field
-                        id = 'phone'
-                        value = { phone }
-                        onChange = { this.setValue }
-                        control = 'input'
-                        type = 'number'
-                        placeholder = 'Phone Number'
+                        id='phone'
+                        value={phone}
+                        onChange={this.setValue}
+                        control='input'
+                        type='number'
+                        placeholder='Phone Number'
                     />
                     <Form.Button>Save</Form.Button>
                 </Form>
