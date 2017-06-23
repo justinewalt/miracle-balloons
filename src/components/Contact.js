@@ -3,10 +3,10 @@ import { Form } from 'semantic-ui-react';
 
 class Contact extends Component {
     default = { firstName: '', lastName: '', email: '', phone: '' };
-    state = { ...this.default }; 
-  
-    setValue = (e) => {
-        let { target: { id, value }} = e;
+    state = { ...this.default };
+
+    setValue = ({ target: { id, value }}) => {
+      this.setState({[id]: value});
     }
 
     render() {
@@ -16,11 +16,11 @@ class Contact extends Component {
                 <h5>
                     What's your contact information?
                 </h5>
-                <Form 
-                    onSubmit = { e => { 
+                <Form
+                    onSubmit = { e => {
                         e.preventDefault();
                         this.setState({...this.default});
-                    }} 
+                    }}
                 >
                     <Form.Field
                         id='firstName'
@@ -28,7 +28,7 @@ class Contact extends Component {
                         onChange={this.setValue}
                         control='input'
                         placeholder='First Name'
-                    />    
+                    />
                     <Form.Field
                         id='lastName'
                         value={lastName}
@@ -56,7 +56,7 @@ class Contact extends Component {
                     <Form.Button>Save</Form.Button>
                 </Form>
             </div>
-        )       
+        )
     }
 }
 
