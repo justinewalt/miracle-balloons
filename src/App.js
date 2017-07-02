@@ -1,6 +1,7 @@
 import React from 'react';
 import SearchForm from './components/SearchForm';
 import Contact from './components/Contact';
+import Reorder from './components/Reorder';
 import './App.css';
 
 const App = () => (
@@ -14,6 +15,7 @@ const App = () => (
     </p>
     <SearchForm />
     <Contact />
+    <Reorder />
   </div>
 )
 
